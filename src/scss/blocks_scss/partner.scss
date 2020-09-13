@@ -1,0 +1,41 @@
+.partner {
+  text-align: center;
+  margin-bottom: 30px;
+
+  &__body {
+
+  }
+
+  &__content {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    @media (min-width: $md-2 + px) {
+      justify-content: space-evenly;
+    }
+  }
+
+  &__item {
+    margin: 0 23.5px 15px;
+    @media (max-width: $md-2 + px) {
+      width: 25%;
+      flex: 0 1 25%;
+      margin: 0 10px 25px;
+    }
+    @media (max-width: 426px) {
+      width: 50%;
+      flex: 0 1 50%;
+      margin: 0 0 25px;
+    }
+  }
+
+  &__content img {
+    display: inline-block;
+    max-width: 100%;
+    @media (max-width: $md-2 + px) {
+        width: 120px;
+    }
+  }
+
+}

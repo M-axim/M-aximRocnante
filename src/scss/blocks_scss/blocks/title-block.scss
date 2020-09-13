@@ -1,0 +1,17 @@
+.title-block {
+  border-radius: 14px;
+  background-color: rgb(106, 186, 163);
+  display: inline-block;
+
+  &__link {
+    padding: 8px 15px;
+    display: block;
+    font-family: Montserrat;
+    font-weight: bold;
+    letter-spacing: -0.12px;
+    text-align: center;
+    @include adaptiv-link(17, 15, white, uppercase);
+    line-height: 1.2;
+  }
+
+}

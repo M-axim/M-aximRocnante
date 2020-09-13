@@ -1,0 +1,37 @@
+/////////MIXINS/////////
+
+// Адаптивный шрифт
+@mixin adaptiv-link($pcSize, $mobSize, $color, $transform: none ) {
+  $addSize: $pcSize - $mobSize;
+  $maxWidth: $mainMaxWidth - 320;
+  font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+  color: $color;
+  text-transform: $transform;
+  @media (min-width: $mainMaxWidth + px) {
+    font-size: $pcSize + px;
+  }
+}
+
+@mixin imgStyle {
+  max-width: 100%;
+  display: block;
+}
+
+@mixin adaptiv-Side($side, $pcPS, $moPS) {
+  $addSize: $pcPS - $moPS;
+  $maxWidth: $mainMaxWidth - 320;
+  #{$side}: calc(#{$moPS + '%'} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}
+
+@mixin position($position, $side1, $side1-distance, $side2, $side2-distance) {
+  position: $position;
+  #{$side1}: $side1-distance;
+  #{$side2}: $side2-distance;
+  @if $side1-distance == 50% and $side2-distance == 50% {
+    transform: translate(-50%, -50%);
+  } @else if $side2-distance == 50% {
+    transform: translateX(-50%);
+  } @else if $side1-distance == 50 {
+    transform: translateY(-50%);
+  }
+}

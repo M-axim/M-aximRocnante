@@ -1,0 +1,69 @@
+// RESET
+@import "blocks_scss/reset";
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------*/
+/* MIXINS AND VARS */
+@import "blocks_scss/var";
+@import "blocks_scss/mixin's";
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------*/
+
+body {
+  font-family: 'Montserrat', sans-serif;
+
+  &.lock {
+    overflow: hidden;
+  }
+}
+
+html {
+  @media (max-width: 1401px) {
+    font-size: 5px;
+  }
+}
+
+.main {
+  margin-top: 110px;
+  display: block;
+  @media (min-width: 801px) {
+    margin-top: 20px;
+  }
+}
+
+/* _CONTAINER */
+._container {
+  max-width: $mainMaxWidth + px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------*/
+/* FONTS */
+@import "fonts";
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------*/
+/* MODIFIER */
+@import "blocks_scss/modifier";
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------*/
+/* BLOCKS OF INDIVIDUAL ELEMENTS */
+// title-block
+@import "blocks_scss/blocks/title-block";
+/*--------------------------------------------------------------------------------------------------------------------------------------------*/
+/* MAINS-BLOCKS */
+// header
+@import "blocks_scss/header";
+// intro
+@import "blocks_scss/intro";
+// our services
+@import "blocks_scss/our-services";
+// partner
+@import "blocks_scss/partner";
+// platform
+@import "blocks_scss/platform";
+// info
+@import "blocks_scss/info";
+// footer
+@import "blocks_scss/footer";
+
+
